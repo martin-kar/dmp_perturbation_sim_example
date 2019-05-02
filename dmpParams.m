@@ -1,0 +1,12 @@
+alpha_e = 5;
+alpha_z = 25;
+alpha_x = 1;
+beta_z = 6.25;
+n_kernel = 15;
+arr = (0:1/(n_kernel-1):1)'*0.5;
+ct = (0:1/(n_kernel-1):1)';
+cx = exp(-alpha_x*3*ct);
+c = cx;
+kc = 10000;
+D  = (diff(c)*0.55).^2;
+D  = 1./[D;D(end)];
